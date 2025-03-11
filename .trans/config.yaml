@@ -1,0 +1,29 @@
+import:
+  - name: "zv"
+    default: true
+    original: /volumes/TEST/DCIM
+    target: /volumes/dev/temp/
+    samefile: sha256
+    patterns:
+      - name: "raw"
+        extentions:
+          - "ARW"
+          - "arw"
+        sort: "2006-01-02/raw" # 2006-01-02/raw/
+        datetime: file
+      - name: "heif"
+        extentions:
+          - "HIF"
+          - "hif"
+        sort: "2006-01-02/" # 2006-01-02/original/
+        datetime: exif
+      - name: "jpeg"
+        mime:
+          - "image/jpeg"
+        sort: "2006-01-02/" # 2006-01-02/original/
+        datetime: exif
+      - name: "txt"
+        extentions:
+          - "txt"
+        sort: "2006-01-02/" # 2006-01-02/original/
+        datetime: exif
