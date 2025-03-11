@@ -1,0 +1,23 @@
+#
+# Common Digital Still Camera
+#
+# This is an example of a typical digital still camera recording in JPEG.
+#
+# Author: @m-tsuru
+# Version: 1.00
+# Date: 2025-03-12
+#
+
+import:
+  - name: "default"
+    default: true
+    original: /Volumes/MEMORY_CARD/DCIM # Change your environment
+    # original: E:/DCIM (for Windows)
+    target: ~/Pictures # Change your environment
+    # target: F:/Images (for Windows)
+    patterns:
+      - name: "jpeg"
+        mime:
+          - "image/jpeg"
+        sort: "2006-01-02/" # the time format used by Go is available.
+        datetime: exif

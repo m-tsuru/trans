@@ -1,0 +1,32 @@
+#
+# SONY Alpha Series (Only Picture)
+#
+# This is an example of Sony Alpha series.
+# Only photos are saved with this config.
+#
+# Author: @m-tsuru
+# Version: 1.00
+# Date: 2025-03-12
+#
+
+import:
+  - name: "alpha"
+    default: true
+    original: /volumes/SD_CARD/DCIM # Change your environment
+    target: ~/Pictures # Change your environment
+    samefile: sha256
+    patterns:
+      - name: "raw"
+        extentions:
+          - "ARW"
+          - "arw"
+        sort: "2006-01-02/raw"
+      - name: "heif"
+        extentions:
+          - "HIF"
+          - "hif"
+        sort: "2006-01-02/"
+      - name: "jpeg"
+        mime:
+          - "image/jpeg"
+        sort: "2006-01-02/"
