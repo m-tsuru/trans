@@ -27,7 +27,7 @@ func Check(dir string, importProfile structs.ImportProfile) error {
 	count := 0
 	countNotCopied := 0
 	countHashIncorrect := 0
-	countSkiped := 0
+	countSkipped := 0
 
 	for _, v := range list {
 		chk, path, err := JudgeCopy(importProfile.Target, importProfile.Patterns, v)
@@ -53,7 +53,7 @@ func Check(dir string, importProfile structs.ImportProfile) error {
 				}
 			}
 		} else {
-			countSkiped++
+			countSkipped++
 			log.Info().Msgf("Skip : %s", v.Path)
 		}
 	}
@@ -70,7 +70,7 @@ func Check(dir string, importProfile structs.ImportProfile) error {
 	}
 	log.Info().Msgf("")
 	log.Info().Msgf("Statistics:")
-	log.Info().Msgf("All Files: %d file(s), Target Files: %d file(s), Skip Files: %d file(s)", len(list), count, countSkiped)
+	log.Info().Msgf("All Files: %d file(s), Target Files: %d file(s), Skipped Files: %d file(s)", len(list), count, countSkipped)
 	log.Info().Msgf("Invalid Hash: %d file(s), Not Copied: %d file(s), total: %d file(s)", countHashIncorrect, countNotCopied, countError)
 	log.Info().Msgf("")
 	log.Info().Msgf("====================")
