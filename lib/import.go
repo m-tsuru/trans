@@ -92,7 +92,7 @@ func JudgeCopy(targetBasePath string, patterns structs.Patterns, metadata struct
 	baseName := filepath.Base(metadata.Path)
 	for _, v := range patterns {
 
-		if len(v.Extentions) < 1 && len(v.Mime) < 1 {
+		if len(v.Extensions) < 1 && len(v.Mime) < 1 {
 			return false, nil, errors.New("valid import pattern does not exist")
 		}
 
@@ -103,8 +103,8 @@ func JudgeCopy(targetBasePath string, patterns structs.Patterns, metadata struct
 			sortFormatted = metadata.ExifDateTime.Format(v.Sort)
 		}
 		targetPath := filepath.Join(targetBasePath, sortFormatted, baseName)
-		if len(v.Extentions) > 0 && len(metadata.Ext) > 0 {
-			if slices.Contains(v.Extentions, metadata.Ext[1:]) {
+		if len(v.Extensions) > 0 && len(metadata.Ext) > 0 {
+			if slices.Contains(v.Extensions, metadata.Ext[1:]) {
 				return true, &targetPath, nil
 			}
 		} else if len(v.Mime) > 0 {

@@ -11,7 +11,7 @@ type Conf struct {
 
 type Pattern struct { // インポートパターン
 	Name       string   `yaml:"name"`                 // パターン名
-	Extentions []string `yaml:"extentions,omitempty"` // 一致させる拡張子
+	Extensions []string `yaml:"extensions,omitempty"` // 一致させる拡張子
 	Mime       []string `yaml:"mime,omitempty"`       // 一致させる MIME Type (拡張子が指定されている場合は無視)
 	Sort       string   `yaml:"sort"`                 // コピー先への振り分け方（Target/Sort），Go 日付フォーマットで指定
 	Datetime   string   `yaml:"datetime,omitempty"`   // 日付取得元 (Exif (exif), ファイル日時 (file))
