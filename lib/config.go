@@ -14,7 +14,7 @@ func DecideConfigPath(config string) (*string, error) {
 	//
 	// Priority of Reading Config Path.
 	// 1. Option `--config`
-	// 2. `./trans/config.yaml`
+	// 2. `./.trans/config.yaml`
 	// 3. config.yaml in the same folder as the executable file
 	// 4. $HOME/.trans/config.yaml
 	//
