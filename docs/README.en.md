@@ -2,6 +2,8 @@
 
 Simple, Easy, Fine Copy.
 
+[the article in Zenn (Japanese)](https://zenn.dev/sasakulari/articles/763d889ef7c201)
+
 ## tl;dr
 
 1. Download the latest executable for your machine architecture.

@@ -2,6 +2,8 @@
 
 Simple, Easy, Fine Copy.
 
+[Zenn の記事](https://zenn.dev/sasakulari/articles/763d889ef7c201)
+
 ## tl;dr
 
 1. 最新のリリースをダウンロードする
