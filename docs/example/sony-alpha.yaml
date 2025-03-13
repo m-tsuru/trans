@@ -17,12 +17,12 @@ import:
     samefile: sha256
     patterns:
       - name: "raw"
-        extentions:
+        extensions:
           - "ARW"
           - "arw"
         sort: "2006-01-02/raw"
       - name: "heif"
-        extentions:
+        extensions:
           - "HIF"
           - "hif"
         sort: "2006-01-02/"
